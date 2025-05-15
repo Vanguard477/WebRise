@@ -1,0 +1,55 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="856de7f2-6c40-5f70-acde-1237cba3efbf" author="user">
+    <createTable tableName="SUBSCRIPTIONS">
+        <column name="code" type="varchar">
+            <constraints  nullable="false" primaryKey="true"/>
+        </column>
+        <column name="name" type="varchar">
+        </column>
+    </createTable>
+    </changeSet>
+
+    <changeSet id="156de7f2-6c40-5f70-acde-1237cba3efbf" author="user">
+        <insert tableName="SUBSCRIPTIONS">
+            <column name="code" value="YOUTUBE_PREMIUM"/>
+            <column name="name" value="YouTube Premium"/>
+        </insert>
+        <insert tableName="SUBSCRIPTIONS">
+            <column name="code" value="VK_MUSIC"/>
+            <column name="name" value="VK Музыка"/>
+        </insert>
+        <insert tableName="SUBSCRIPTIONS">
+            <column name="code" value="YANDEX.PLUS"/>
+            <column name="name" value="Яндекс.Плюс"/>
+        </insert>
+        <insert tableName="SUBSCRIPTIONS">
+            <column name="code" value="NETFLIX"/>
+            <column name="name" value="Netflix"/>
+        </insert>
+        <insert tableName="SUBSCRIPTIONS">
+            <column name="code" value="WINK"/>
+            <column name="name" value="Wink"/>
+        </insert>
+        <insert tableName="SUBSCRIPTIONS">
+            <column name="code" value="RU-TUBE"/>
+            <column name="name" value="Ru-tube"/>
+        </insert>
+        <insert tableName="SUBSCRIPTIONS">
+            <column name="code" value="MOVIX"/>
+            <column name="name" value="Movix"/>
+        </insert>
+        <insert tableName="SUBSCRIPTIONS">
+            <column name="code" value="TWITCH"/>
+            <column name="name" value="Twitch"/>
+        </insert>
+        <insert tableName="SUBSCRIPTIONS">
+            <column name="code" value="OKKO"/>
+            <column name="name" value="OKKO"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

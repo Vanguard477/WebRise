@@ -1,0 +1,20 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="135de7f2-6c40-5f70-acde-1237cba3efbf" author="user">
+        <createTable tableName="USERS_SUBSCRIPTIONS">
+            <column name="user_id" type="varchar">
+                <constraints nullable="false" foreignKeyName="users_subscriptions_user_id"
+                references="USERS(ID)" deleteCascade="true"/>
+            </column>
+            <column name="subscriptions_code" type="varchar">
+                <constraints nullable="false" foreignKeyName="users_subscriptions_subscriptions_code"
+                             references="SUBSCRIPTIONS(CODE)" deleteCascade="true"/>
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="USERS_SUBSCRIPTIONS" columnNames="user_id, subscriptions_code" />
+    </changeSet>
+
+</databaseChangeLog>
